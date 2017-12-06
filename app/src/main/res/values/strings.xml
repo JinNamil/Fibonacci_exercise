@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FibonacciActivicy</string>
+    <string name="db_insert">"insert into JinDataBase values (" %1$d ","%2$d")"</string>
+</resources>

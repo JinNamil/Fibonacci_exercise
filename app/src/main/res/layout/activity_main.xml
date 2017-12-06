@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.fibonacciactivicy.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+/**
+    *Button styles.xml
+    *Text colors.xml
+    */
+    <EditText
+        android:id="@+id/fb"
+        android:layout_width="176dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="27dp"
+        android:hint="숫자를 입력하세요." />
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/btnStyleAcapulco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="107dp"
+        android:text="출력"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:text="수열 출력"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/db"
+        style="@style/btnStyleAcapulco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn"
+        android:layout_alignBottom="@+id/btn"
+        android:layout_toEndOf="@+id/select"
+        android:text="전송"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/select"
+        style="@style/btnStyleAcapulco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/db"
+        android:layout_alignBottom="@+id/db"
+        android:layout_toEndOf="@+id/btn"
+        android:text="검색"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text1"
+        android:layout_alignBottom="@+id/text1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:text="DataBase_List"
+        android:textColor="@color/color_red"
+        tools:layout_editor_absoluteX="267dp" />
+
+</RelativeLayout>
