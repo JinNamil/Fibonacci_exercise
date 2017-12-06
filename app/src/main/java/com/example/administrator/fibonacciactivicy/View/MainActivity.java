@@ -1,32 +1,25 @@
-package com.example.administrator.fibonacciactivicy;
+package com.example.administrator.fibonacciactivicy.View;
 
-import android.app.Activity;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.example.administrator.fibonacciactivicy.R;
 
 
 public class MainActivity extends AppCompatActivity {
-//    private SQLiteActivity sqLiteActivity = new SQLiteActivity(MainActivity.this, "number.db", null, 1);
-    private Presenter presenter;
-    private MainModel mainModel;
     private Button button, DBbutton, slbutton;
-    private EditText editText;
     private SQLiteActivity sqLiteActivity = new SQLiteActivity(MainActivity.this, "number.db", null, 1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         button = (Button) findViewById(R.id.btn);
-         DBbutton = (Button) findViewById(R.id.db);
-         slbutton = (Button) findViewById(R.id.select);
-//         editText = (EditText) findViewById(R.id.fb);
-//        presenter = new PresenterImpl(MainActivity.this);
-
+        button = (Button) findViewById(R.id.btn);
+        DBbutton = (Button) findViewById(R.id.db);
+        slbutton = (Button) findViewById(R.id.select);
 
 
 /**
@@ -38,33 +31,29 @@ public class MainActivity extends AppCompatActivity {
                      * Insert into Table that SQLite
                      */
 
-                     EditText editText1 = (EditText) findViewById(R.id.fb);
-                     String str1 = editText1.getText().toString();
-                     int num = Integer.parseInt(str1);
+                    EditText editText1 = (EditText) findViewById(R.id.fb);
+                    String str1 = editText1.getText().toString();
+                    int num = Integer.parseInt(str1);
                     Resources resources = getResources();
-//                    presenter.DBinsert(num);
                     String insert_str = String.format(resources.getString(R.string.db_insert), num, function(num));
                     sqLiteActivity.insert(insert_str);
                 }
         );
 
         slbutton.setOnClickListener(view -> {
-             EditText editText1 = (EditText) findViewById(R.id.fb);
-             String str1 = editText1.getText().toString();
-             int num = Integer.parseInt(str1);
-            TextView textView2 = (TextView)findViewById(R.id.text2);
-//            presenter.DBfunction();
+            EditText editText1 = (EditText) findViewById(R.id.fb);
+            String str1 = editText1.getText().toString();
+            TextView textView2 = (TextView) findViewById(R.id.text2);
             textView2.setText(sqLiteActivity.DBdata());
         });
 
 
         button.setOnClickListener(view -> {
-             EditText editText1 = (EditText) findViewById(R.id.fb);
-             String str1 = editText1.getText().toString();
-             int num = Integer.parseInt(str1);
-            TextView textView1 = (TextView)findViewById(R.id.text1);
-            textView1.setText("값 : "+function(num));
-//            presenter.functionbtn(num);
+            EditText editText1 = (EditText) findViewById(R.id.fb);
+            String str1 = editText1.getText().toString();
+            int num = Integer.parseInt(str1);
+            TextView textView1 = (TextView) findViewById(R.id.text1);
+            textView1.setText("값 : " + function(num));
         });
     }
 
@@ -80,10 +69,5 @@ public class MainActivity extends AppCompatActivity {
             return function(result2 - 2) + function(result2 - 1);
         }
     }
-
-//    @Override
-//    public void setConfirmText(int a) {
-//        button.setText(a);
-//    }
 }
 

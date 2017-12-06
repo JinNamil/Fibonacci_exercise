@@ -1,4 +1,4 @@
-package com.example.administrator.fibonacciactivicy;
+package com.example.administrator.fibonacciactivicy.View;
 
 import android.content.Context;
 import android.database.Cursor;

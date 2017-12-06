@@ -1,7 +1,7 @@
-package com.example.administrator.fibonacciactivicy;
+package com.example.administrator.fibonacciactivicy.View;
 
 /**
- * Created by Administrator on 2017-12-06. TestActivity
+ * TestActivity
  */
 
 public class sumActivity {
